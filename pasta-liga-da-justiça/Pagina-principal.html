@@ -1,24 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/b0faed2829.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     <style>
         body {
-          background-image: url('Imagens-extras/earth.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: 100% 100%;
+            background-image: url('Imagens-extras/earth.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
         }
-        h1{
+        h1 {
             color: white;
+            text-align: right;
+            margin: 0;
+            padding: 20px 0;
+            font-size: 20px;
         }
-        </style>
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .header-content {
+            max-width: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 10px;
+            width: 500%;
+        }
+        header {
+            background-color: DimGrey;
+            width: 100%;
+            height: 100px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .social-buttons button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;           
+        }
+        .social-buttons button i {
+            font-size: 24px;
+            color: white;
+          
+        }
+    </style>
 </head>
 <body>
-   <div class="parte-de-cima">
-    <h1>Bem Vindos ao Ecritório da Liga da Justiça</h1>
-   </div> 
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <!-- Logo da Liga da Justiça aqui -->
+            </div>
+            <h1>Bem Vindos ao Escritório da Liga da Justiça</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Sobre Nós</a>
+                <a href="#">Contatos</a>
+                <a href="#">Blog</a>
+            </nav>
+            <div class="social-buttons">
+                <button><i class="fa-brands fa-square-instagram"></i></button>
+                <button><i class="fa-brands fa-square-twitter"></i></button>
+                <button><i class="fa-brands fa-youtube"></i></button>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
+
