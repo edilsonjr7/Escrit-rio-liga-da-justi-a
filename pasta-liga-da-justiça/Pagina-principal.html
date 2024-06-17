@@ -53,6 +53,20 @@
             --transition-timing: 0.35s;
         }
 
+        .card-estagio {
+            min-width: 70px;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            flex-grow: 1;
+            cursor: pointer;
+            position: relative;
+            transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-timing: 0.35s;
+        }
+
         .card:hover {
             flex-grow: 7;
         }
@@ -156,6 +170,92 @@
             margin: 20px auto;
         }
 
+        .card-estagio:hover {
+            flex-grow: 7;
+        }
+
+        .card-estagio>.background {
+            position: absolute;
+            inset: 0;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.4);
+            z-index: -1;
+            transition: var(--transition-timing) ease;
+        }
+
+        .card-estagio:hover>.background {
+            filter: brightness(1);
+        }
+
+        .card-estagio>.card-content {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 20px;
+            overflow: hidden;
+            transition: var(--transition-timing);
+            z-index: 10;
+        }
+
+        .card-estagio:hover>.card-content {
+            inset: 20px;
+            top: auto;
+        }
+
+        .card-content>* {
+            transition: var(--transition-timing);
+        }
+
+        .card-content>.profile-image {
+            min-width: 50px;
+            max-width: 50px;
+            height: 50px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .card-estagio:hover .profile-image {
+            border: 1px solid rgb(110, 252, 205);
+        }
+
+        .profile-image>svg {
+            stroke: #fefefe;
+        }
+
+        .card-estagio:hover .profile-image>svg {
+            stroke: rgb(110, 252, 205);
+        }
+
+        .card-content>.title {
+            white-space: pre;
+            margin-left: 10px;
+            translate: 0 100%;
+            opacity: 0;
+        }
+
+        .card-estagio:hover .title {
+            opacity: 1;
+            translate: 0 0;
+        }
+
+        .card-estagio>.backdrop {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100px;
+            z-index: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+        }
+
+
         h3 {
             color: white;
         }
@@ -216,18 +316,6 @@
         a:hover {
             color: red;
         }
-
-        .sobre {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 15px;
-            border-radius: 15px;
-            max-width: 800px;
-            text-align: center;
-            color: white;
-            margin: 50px auto;
-            font-family:Arial, Helvetica, sans-serif
-        }
-
     </style>
 </head>
 
@@ -240,21 +328,21 @@
             <h1>Bem Vindos ao Escritório da Liga da Justiça</h1>
             <nav>
                 <a href="#">Home</a>
-                <a href="#">Sobre Nós</a>
-                
+                <a href="sobrenos.html">Sobre Nós</a>
+
 
             </nav>
             <div class="social-buttons">
                 <a href="https://www.instagram.com/dcofficial/" target="_blank">
-                <button><i class="fa-brands fa-instagram"></i></button>
+                    <button><i class="fa-brands fa-instagram"></i></button>
                 </a>
 
                 <a href="https://www.youtube.com/@dcofficial" target="_blank">
-                <button><i class="fa-brands fa-youtube"></i></button>
-            </a>
-               <a href="https://x.com/DCOfficial" target="_blank">
-                <button><i class="fa-brands fa-twitter"></i></button>
-            </a>
+                    <button><i class="fa-brands fa-youtube"></i></button>
+                </a>
+                <a href="https://x.com/DCOfficial" target="_blank">
+                    <button><i class="fa-brands fa-twitter"></i></button>
+                </a>
             </div>
         </div>
     </header>
@@ -267,8 +355,8 @@
 
             <div class="card-content">
                 <div class="profile-image">
-                    <img class="background" src="Imagens-extras/SUPERMAN-simbolo.jpg">  
-                   
+                    <img class="background" src="Imagens-extras/SUPERMAN-simbolo.jpg">
+
                 </div>
 
 
@@ -284,7 +372,7 @@
             <div class="card-content">
                 <div class="profile-image">
                     <img class="background" src="Imagens-extras/wonder woman-simbolo.jpg" alt="">
-                   
+
                 </div>
 
                 <h3 class="title">Advogada Empresarial</h3>
@@ -334,9 +422,41 @@
             </div>
             <div class="backdrop"></div>
         </div>
-    </div>
-    <div class="sobre">
-        Impulsionado pela restauração de sua fé na humanidade e inspirado pelo ato altruísta do Superman, Bruce Wayne convoca sua nova aliada Diana Prince para o combate contra um inimigo ainda maior, recém-despertado. Juntos, Batman e Mulher-Maravilha buscam e recrutam com agilidade um time de meta-humanos, mas mesmo com a formação da liga de heróis sem precedentes, pode ser tarde demais para salvar o planeta de um catastrófico ataque.
+
+
+        <div class="card-estagio">
+            <img class="background" src="Imagens-dos-membros/Robin Tim Drake Wallpaper.jpg" alt="">
+
+            <div class="card-content">
+                <div class="profile-image">
+                    <img class="background" src="Imagens-extras/Damian Wayne Robin symbol.jfif">
+
+                </div>
+
+    
+                
+                <h3 class="title">Estagiario</h3>
+                <h3 class="title"><a href="robin.html">robin</a></h3>
+            </div>
+            <div class="backdrop"></div>
+        </div>
+
+        <div class="card-estagio">
+            <img class="background" src="Imagens-dos-membros/woman bat.jpg" alt="">
+
+            <div class="card-content">
+                <div class="profile-image">
+                    <img class="background" src="Imagens-extras/A_R.C.H.I.V.E_">
+
+                </div>
+
+
+                <h3 class="title">Estagiaria</h3>
+                <h3 class="title"><a href="bat girl.html">bat girl</a></h3>
+            </div>
+            <div class="backdrop"></div>
+        </div>
+
     </div>
 </body>
 
